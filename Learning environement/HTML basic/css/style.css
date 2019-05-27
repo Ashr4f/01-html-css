@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+@font-face {
+    font-family: roboto-regular;
+    src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+
+::-moz-selection {
+    background: #8bb4c0;
+}
+
+::selection {
+    background: #8bb4c0;
+}
+
+*,
+*::before,
+*::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+    width: 100%;
+    font-size: 16px;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: "roboto-regular";
+    color: #ffffff;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    overflow-y: auto;
+}
+
+body::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.wrapper {
+    position: relative;
+    display: block;
+    height: 100%;
+    padding: 5rem 5.5rem;
+    z-index: 2;
+    overflow: auto;
+}
+
+.content {
+    margin-top: 25vh;
+    max-width: 1700px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+.heading {
+    margin-top: 0;
+}
+
+.heading-1 {
+    font-size: 4rem;
+    letter-spacing: 0.15rem;
+}
+
+q.quote {
+    position: relative;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    line-height: 1.65rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.quote-container:hover .quote {
+    color: #1fcaa7;
+}
+
+.credits {
+    display: block;
+    font-size: 1.2rem;
+}
+
+.credits a,
+.link {
+    color: #1fcaa7;
+    display: inline-block;
+}
+
+.lorem {
+    margin-top: 3rem;
+    font-size: 1.2rem;
+}
+
+.youtube-iframe {
+    display: block;
+    width: 50%;
+    height: 32rem;
+    max-width: 50%;
+    max-height: 32rem;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1600px) and (min-width: 767px) {
+
+    .heading-1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    q.quote {
+        font-size: 1.8rem;
+    }
+
+    .credits {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .wrapper {
+        padding: 2rem 0.5rem;
+        overflow: auto;
+    }
+
+    .heading-1 {
+        font-size: 3rem;
+    }
+
+    q.quote {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .credits {
+        font-size: 1.1rem;
+    }
+
+    .youtube-iframe {
+        width: 100%;
+        max-width: 100%;
+    }
+}
